@@ -1,0 +1,70 @@
+<div class = body>
+
+    <div class="formulario">
+        <h2>Añadir Libro</h2>
+        <div class="form">
+            <input type="number" placeholder="Id Libro" name="idlibro"><br>
+            <input type="number" placeholder="Id Usuario" name="idusuario"><br>
+            <input type="text" placeholder="Titulo" name="titulo"><br>
+            <input type="text" placeholder="Tipo Libro" name="tipolibro"><br>
+            <input type="text" placeholder="Autor" name="autor"><br>
+            <input type="number" placeholder="Precio" name="precio"><br>
+            <input type="text" placeholder="Photo" name="photo"><br>
+            <input type="button"  value="Insertar Libro">
+        </div>
+    </div>
+
+    <div class="formulario_modificar">
+        <h2>Modificar Libro</h2>
+        <div class="form">
+            <input type="number" placeholder="Id Libro" name="idlibro"><br>
+            <input type="number" placeholder="Id Usuario" name="idusuario"><br>
+            <input type="text" placeholder="Titulo" name="titulo"><br>
+            <input type="text" placeholder="Tipo Libro" name="tipolibro"><br>
+            <input type="text" placeholder="Autor" name="autor"><br>
+            <input type="number" placeholder="Precio" name="precio"><br>
+            <input type="text" placeholder="Photo" name="photo"><br>
+            <input type="button"  value="Modificar Libro">
+        </div>
+    </div>
+
+
+    <div *ngIf="libros.length === 0; else contenedorLibros" >
+        EL ARRAY DE LIBROS ESTÁ VACIO
+    </div>
+    <ng-template #contenedorLibros>
+        <ng-container  *ngFor="let libro of libros; let impar = even ; let par = odd ">
+            <div class = libro>
+                <div class="marco">
+                    <img src= {{libro.photo}}>
+                </div>
+                <div class="libro-detalles">
+                    <p>Titulo: {{libro.titulo}} </p>
+                    <p>Autor: {{libro.autor}} </p>
+                    <p>Tipo: {{libro.tipolibro}} </p>
+                    <p>Precio: {{libro.precio}} </p>
+                    <input [ngClass]="{calseAzul: impar, claseVioleta: par}" type="button"  value="Comprar">
+                </div>
+    
+            </div>
+        </ng-container>
+    </ng-template>
+    
+
+        
+        
+
+
+    <!-- <div class="canvas1">
+        <div>
+            <div class="marco">
+               <img src="{{miUsuario.url}}"/> 
+                <!-- <img src="https://www.movilzona.es/app/uploads-movilzona.es/2019/05/Foto-de-Perfil-en-WhatsApp.jpg"> -->
+            <!-- </div>
+                <div class="linea"> Nombre &nbsp; <input type="text" [value]="miUsuario.nombre" #input1></div>   
+                <div class="linea"> Apellido &nbsp;<input type="text" [value]="miUsuario.apellidos" #input2></div>   
+                <div class="linea"> Correo &nbsp;&nbsp;&nbsp;&nbsp;<input type="text" [value]="miUsuario.correo" #input3></div>       
+            </div>       
+    </div> -->
+     -->
+</div>

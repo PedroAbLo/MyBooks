@@ -1,0 +1,22 @@
+<div class="canvas1">
+    <div>
+        <div class="marco">
+           <img src="{{miUsuario.url}}"/> 
+            <!-- <img src="https://www.movilzona.es/app/uploads-movilzona.es/2019/05/Foto-de-Perfil-en-WhatsApp.jpg"> -->
+        </div>
+            <div class="linea"> Nombre &nbsp; <input type="text" [value]="miUsuario.nombre" ></div>   
+            <div class="linea"> Apellido &nbsp;<input type="text" [value]="miUsuario.apellidos" ></div>   
+            <div class="linea"> Correo &nbsp;&nbsp;&nbsp;&nbsp;<input type="text" [value]="miUsuario.correo"></div>       
+        </div>       
+</div>
+<div class="canvas2">
+    <h2>Editar datos</h2>
+    <div class="form">
+        <input type="text" placeholder="Nombre" name="nombre" #input1><br>
+        <input type="text" placeholder="Apellido" name="apellido"><br>
+        <input type="text" placeholder="E-mail" name="email"><br>
+        <input type="text" placeholder="Url" name="url"><br>
+        <input type="button" (click)= enviar(input1.value) value="Modificar">
+    </div>
+
+</div>

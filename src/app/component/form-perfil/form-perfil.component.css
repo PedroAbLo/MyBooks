@@ -1,0 +1,74 @@
+.canvas2 h2{
+	display: flex;
+	margin-left: 60px;
+	color: white;
+}
+.form{
+	margin-top: 15px;
+	border-top: 4px solid white;
+}
+.canvas2{
+	background-color: rgba(255, 255, 255, 0.219);
+	border: 1px solid white;
+	position: absolute;
+	top: calc(40% - 140px);
+	left: calc(60% - 50px);
+	height: 400px;
+	width: 350px;
+	padding: 50px;
+	z-index: 2;
+}
+
+.canvas2 input[type=text]{
+	width: 250px;
+	height: 30px;
+	background: transparent;
+	border: 1px solid rgba(255,255,255,0.6);
+	border-radius: 2px;
+	color: #fff;
+	font-family: 'Exo', sans-serif;
+	font-size: 16px;
+	font-weight: 400;
+	padding: 4px;
+    margin-top:10px;
+}
+
+.canvas2 input[type=button]{
+	width: 250px;
+	height: 35px;
+	background: #fff;
+	border: 1px solid #fff;
+	cursor: pointer;
+	border-radius: 2px;
+	color: #a18d6c;
+	font-family: 'Exo', sans-serif;
+	font-size: 16px;
+	font-weight: 400;
+	padding: 6px;
+	margin-top: 10px;
+}
+
+.canvas2 input[type=button]:hover{
+	opacity: 0.8;
+}
+
+.canvas2 input[type=button]:active{
+	opacity: 0.6;
+}
+
+.canvas2 input[type=text]:focus{
+	outline: none;
+	border: 1px solid rgba(255,255,255,0.9);
+}
+
+.canvas2 input[type=button]:focus{
+	outline: none;
+}
+
+::-webkit-input-placeholder{
+   color: rgba(255,255,255,0.6);
+}
+
+::-moz-input-placeholder{
+   color: rgba(255,255,255,0.6);
+}
