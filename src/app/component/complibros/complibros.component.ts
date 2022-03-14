@@ -83,5 +83,27 @@ export class ComplibrosComponent implements OnInit {
     
   }
 
+  public buscar2(id_libro):void{
 
-}
+        // si el campo idLibro está vacio mostramos todos.
+    if (id_libro == ""){
+      // console.log("Entra aqui");
+      this.libros = this.ServicioLibros.getAll();
+    }else{
+      // console.log("Entra en motrar 1");
+      console.log(this.ServicioLibros.getOne(id_libro));
+      this.libros = [];
+      this.libros.push(this.ServicioLibros.getOne(id_libro));
+      
+    }
+      
+  }
+
+  public eliminarLibro2(idlibro){
+    let posicion = -1;
+
+    this.ServicioLibros.delete(idlibro)
+        this.libros.splice(posicion,1);
+      }
+    }
+

@@ -4,11 +4,11 @@
     </div>
     <br>
     <div class="login">
-            <input type="text" placeholder="Nombre" name="nombre"><br>
-            <input type="text" placeholder="Apellido" name="apellido"><br>
-            <input type="text" placeholder="E-mail" name="email"><br>
-            <input type="text" placeholder="Url" name="url"><br>
-            <input type="password" placeholder="Contraseña" name="password"><br>
-            <input type="password" placeholder="Repetir contraseña" name="password2"><br>
-            <input type="button" value="Login">
+            <input type="text" placeholder="Nombre" name="nombre" #inputNombre required><br>
+            <input type="text" placeholder="Apellido" name="apellido" #inputApellidos required><br>
+            <input type="text" placeholder="E-mail" name="email" #inputEmail required><br>
+            <input type="text" placeholder="Url" name="url" #inputUrl required><br>
+            <input type="password" placeholder="Contraseña" name="password" #inputContrasena1 required><br>
+            <input type="password" placeholder="Repetir contraseña" name="password2" #inputContrasena2 required><br>
+            <input type="button" value="Login" (click)="registrarUsuario2(inputNombre.value,inputApellidos.value,inputEmail.value,inputUrl.value,inputContrasena1.value,inputContrasena2.value)">
     </div>

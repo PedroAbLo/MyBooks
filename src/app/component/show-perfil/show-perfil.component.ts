@@ -20,8 +20,10 @@ export class ShowPerfilComponent implements OnInit {
                                    "aaa");
    }
 
-   enviar(nuevoNombre: string){
+   enviar(nuevoNombre: string, nuevoApellido:string, nuevoEmail:string){
      this.miUsuario.nombre = nuevoNombre;
+     this.miUsuario.apellidos = nuevoApellido;
+     this.miUsuario.correo = nuevoEmail;
    }
 
   ngOnInit(): void {

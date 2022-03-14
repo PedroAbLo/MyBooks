@@ -14,6 +14,7 @@ import { ShowPerfilComponent } from './component/show-perfil/show-perfil.compone
 import { LibrosComponent } from './pages/libros/libros.component';
 import { ComplibrosComponent } from './component/complibros/complibros.component';
 import { RefModPipe } from './pipes/ref-mod.pipe';
+import { HttpClientModule } from '@angular/common/http'
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { RefModPipe } from './pipes/ref-mod.pipe';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,4 +1,4 @@
-<div class = body>
+<div class = "body">
 
     <div class="formulario">
         <h2>Añadir Libro</h2>
@@ -29,25 +29,33 @@
     </div>
 
 
+    <div class="busqueda">
+        <input  type="search" placeholder="Buscar un libro" #inputLibroABuscar>
+        <button  type="button" (click)="buscar2(inputLibroABuscar.value)">Buscar</button>
+    </div>
+
     <div *ngIf="libros.length === 0; else contenedorLibros" >
         EL ARRAY DE LIBROS ESTÁ VACIO
     </div>
     <ng-template #contenedorLibros>
-        <ng-container  *ngFor="let libro of libros; let impar = even ; let par = odd ">
-            <div class = libro>
-                <div class="marco">
-                    <img src= {{libro.photo}}>
+        <div class="libros">
+            <ng-container  *ngFor="let libro of libros; let impar = even ; let par = odd ">
+                <div class = libro>
+                    <div class="marco">
+                        <img class="imagen" src= {{libro.photo}}>
+                        <!-- Boton X para eliminar  -->
+                        <button class="BotonElminiar" type="button" (click)="eliminarLibro2(libro.id_libro).value"> X </button> 
+                    </div>
+                    <div class="libro-detalles">
+                        <p>Titulo: {{libro.titulo}} </p>
+                        <p>Autor: {{libro.autor}} </p>
+                        <p>Tipo: {{libro.tipolibro}} </p>
+                        <p>Precio: {{libro.precio}} </p>
+                        <input [ngClass]="{calseAzul: impar, claseVioleta: par}" type="button"  value="Comprar">
+                    </div>    
                 </div>
-                <div class="libro-detalles">
-                    <p>Titulo: {{libro.titulo}} </p>
-                    <p>Autor: {{libro.autor}} </p>
-                    <p>Tipo: {{libro.tipolibro}} </p>
-                    <p>Precio: {{libro.precio}} </p>
-                    <input [ngClass]="{calseAzul: impar, claseVioleta: par}" type="button"  value="Comprar">
-                </div>
-    
-            </div>
-        </ng-container>
+            </ng-container>
+        </div>  
     </ng-template>
     
 
